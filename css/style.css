@@ -4,8 +4,12 @@ body{
     font-family: 'Work Sans', sans-serif;
 }
 
+#logo > img{
+    width: 150px;
+}
+
 #text-group{
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .small-heading{
