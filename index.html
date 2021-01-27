@@ -24,22 +24,44 @@
 
 <body>
 
-  <div id="loading">
-    
-  </div>
+    <div id="loading">
+        
+    </div>
 
-    <div id="main-page" style="display:block">
+    <div class="container-fluid" id="main-page" style="display:none">
+        <div id="logo">
+            <img src="img/logo.png" />
+        </div>
         <div class="row">
-            <div class="col-6">Hello, World</div>
-            <div class="col-6">Hello, World</div>
+            <div id="left-text-content" class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="text-left" id="text-group">
+                    <h6 class="small-heading">Keep An Eye</h6>
+                    <h2 class="main-heading">New Projects Coming Every Week!</h2>
+                    <p class="normal-text">Dhruv and Siddhi are collaborating on new projects every week and you can keep an eye on it by looking at the homepage.</p>
+                    <button type="button" class="btn btn-links mr-5">Dhruv's Homepage</button>
+                    <button type="button" class="btn btn-links">Siddhi's Homepage</button>
+                </div>
+            </div>
+
+            <div id="timer-content" class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="text-center" id="timer-group">
+                    <h2 id="timer-text" class="main-heading">
+                        <span id="days"></span>:
+                        <span id="hours"></span>:
+                        <span id="minutes"></span>:
+                        <span id="seconds"></span>
+                    </h2>
+                    <p class="normal-text">Time remaining for the new project.</p>
+                </div>
+            </div>
         </div>
     </div>
     
     <!-- Bootstrap Core JS -->
-    <script src="js/stylish-portfolio.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="js/stylish-portfolio.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
