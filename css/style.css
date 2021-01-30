@@ -7,6 +7,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: #5459bf;
+    z-index: 10;
     color: white;
     font-family: 'Work Sans', sans-serif;
 }
@@ -14,6 +15,12 @@ body{
 .wrapper {
     width: 100%;
     height: 100%;
+    z-index: 10;
+    animation: loading-up 1s ease-out 1.5s 1;
+}
+
+.wrapper>*{
+    z-index: inherit;
 }
 
 .centered {
@@ -24,7 +31,7 @@ body{
   }
 
 .loading-page-1{
-    display: block;
+    /* display: block; */
     -webkit-text-stroke: 1px #4db0ff;
     -webkit-text-fill-color: #4c4f8c;
     
@@ -40,7 +47,7 @@ body{
     background-color: #4db0ff;
     height:100%;
     width:100%;
-    animation: loading 2s ease-in 1;
+    animation: loading 1.5s ease-in 1;
 }
 
 .el:after{
@@ -52,6 +59,10 @@ body{
     transform: translate(-50%, -50%);
 }
 
+.hide{
+    display: none !important;
+}
+
 /* animation */
 
 @keyframes loading {
@@ -61,6 +72,26 @@ body{
       width: 100%;
     }
   }
+
+  @keyframes loading-up {
+    0% {
+      height: 100%;
+    } 100% {
+      height: 0;
+    }
+  }
+
+/* page 3 */
+
+#main-page{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+#main-page>*{
+    z-index: inherit;
 }
 
 #logo > img{
@@ -68,7 +99,7 @@ body{
 }
 
 #text-group{
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .small-heading{
@@ -78,7 +109,7 @@ body{
 
 .main-heading{
     font-weight: bolder;
-    font-size: 5rem;
+    font-size: 4.5rem;
     line-height: 1;
 }
 
@@ -107,16 +138,21 @@ body{
 }
 
 #timer-group{
-    padding: 2rem;
+    padding: 1rem;
 }
 
 #timer-text{
-    font-size: 5rem !important;
+    font-size: 5.5rem !important;
 }
 
 
 /********** Responsive ***********/
 @media only screen and (max-width: 600px) {
+
+    .loading-page-1{
+        font-size: 4rem;
+    }
+
     #logo{
         text-align: center;
     }
