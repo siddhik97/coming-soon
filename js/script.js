@@ -48,3 +48,14 @@ function tick() {
 }
 
 getSeconds();
+
+setTimeout(function() {
+    console.log("Hellloooooooooooooooooooooooooooooooooo");
+    document.querySelector(".el").classList.add("hide");
+    document.querySelector("#main-page").classList.remove("hide");
+  }, 1500)
+
+  setTimeout(function() {
+    console.log("Hellloooooooooooooooooooooooooooooooooo");
+    document.querySelector(".wrapper").classList.add("hide");
+  }, 2500)
